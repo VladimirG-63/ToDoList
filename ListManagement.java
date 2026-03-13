@@ -161,7 +161,7 @@ public class ListManagement {
         String word = scanner.nextLine();
 
         List<DailyTasks> foundTask = list.stream()
-                .filter(s -> s.getName().toLowerCase().contains(word.toLowerCase()))
+                .filter(s -> s.getName().contains(word))
                 .collect(Collectors.toList());
 
         if (foundTask.isEmpty()) {
